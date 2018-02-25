@@ -36,7 +36,7 @@ namespace Bot.CognitiveServices.Dialogs
         /// <summary>
         /// Caso a intenção não seja reconhecida.
         /// </summary>
-        [LuisIntent("consciencia")]
+        [LuisIntent("Consciencia")]
         public async Task ConscienciaAsync(IDialogContext context, LuisResult result)
         {
             await context.PostAsync("**(▀̿Ĺ̯▀̿ ̿)** - Eu sou famoso **Bot Inteligentão**\nFalo vários idiomas e reconheço padrões...");
@@ -46,7 +46,7 @@ namespace Bot.CognitiveServices.Dialogs
         /// <summary>
         /// Quando a intenção for por ajuda.
         /// </summary>
-        [LuisIntent("ajudar")]
+        [LuisIntent("Ajudar")]
         public async Task AjudarAsync(IDialogContext context, LuisResult result)
         {
             var response = "Não se esqueça que eu sou um **Bot** e minha conversação é limitada. Olha ai o que eu consigo fazer:\n" +
@@ -64,7 +64,7 @@ namespace Bot.CognitiveServices.Dialogs
         /// <summary>
         /// Quando a intenção for uma saudação.
         /// </summary>
-        [LuisIntent("saudar")]
+        [LuisIntent("Saudar")]
         public async Task Saudar(IDialogContext context, LuisResult result)
         {
             var now = TimeZoneInfo.ConvertTimeFromUtc(DateTime.UtcNow, TimeZoneInfo.FindSystemTimeZoneById("E. South America Standard Time")).TimeOfDay;
@@ -81,7 +81,7 @@ namespace Bot.CognitiveServices.Dialogs
         /// <summary>
         /// Quando a intenção for detectar emoções em uma determinada imagem.
         /// </summary>
-        [LuisIntent("reconhecer-emocoes")]
+        [LuisIntent("Reconhecer-Emocoes")]
         public async Task ReconhecerEmocoes(IDialogContext context, LuisResult result)
         {
             await context.PostAsync("**ಠ~ಠ** - Desculpa, eu ainda não sei reconhecer emoções...");
@@ -90,7 +90,7 @@ namespace Bot.CognitiveServices.Dialogs
         /// <summary>
         /// Quando a intenção for descrever uma imagem.
         /// </summary>
-        [LuisIntent("descrever-imagem")]
+        [LuisIntent("Descrever-Imagem")]
         public async Task DescreverImagen(IDialogContext context, LuisResult result)
         {
             await context.PostAsync("**(¬_¬)** - Foi mal, ainda não aprendi a descrever coisas...");
@@ -99,7 +99,7 @@ namespace Bot.CognitiveServices.Dialogs
         /// <summary>
         /// Quando a intenção for classificar uma imagem.
         /// </summary>
-        [LuisIntent("classificar-imagem")]
+        [LuisIntent("Classificar-Imagem")]
         public async Task ClassificarImagem(IDialogContext context, LuisResult result)
         {
             await context.PostAsync("**(ง'̀-'́)ง** - Quase lá... juro que na próxima vez vou saber classificar uma imagem...");
@@ -108,7 +108,7 @@ namespace Bot.CognitiveServices.Dialogs
         /// <summary>
         /// Quando a intenção for de tradução de um determinado texto.
         /// </summary>
-        [LuisIntent("traduzir-texto")]
+        [LuisIntent("Traduzir-Texto")]
         public async Task TraduzirTexto(IDialogContext context, LuisResult result)
         {
             await context.PostAsync("**(ಥ﹏ಥ)** - Ainda estou estudando... tenha um pouco de paciência...");
@@ -117,7 +117,7 @@ namespace Bot.CognitiveServices.Dialogs
         /// <summary>
         /// Quando a intenção for a solicitação de recomendação baseada em um produto.
         /// </summary>
-        [LuisIntent("recomendar-por-produto")]
+        [LuisIntent("Recomendar-Por-Produto")]
         public async Task RecomendarPorProduto(IDialogContext context, LuisResult result)
         {
             var produtoId = result.Entities.FirstOrDefault(c => c.Type == "produto")?.Entity;
@@ -137,7 +137,7 @@ namespace Bot.CognitiveServices.Dialogs
         /// <summary>
         /// Quando a intenção for a solicitação de recomendação baseada em um perfil de compra.
         /// </summary>
-        [LuisIntent("recomendar-por-perfil")]
+        [LuisIntent("Recomendar-Por-Perfil")]
         public async Task RecomendarPorPerfil(IDialogContext context, LuisResult result)
         {
             var usuarioId = result.Entities.FirstOrDefault(c => c.Type == "usuario")?.Entity;
